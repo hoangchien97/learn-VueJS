@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- Một tham số -->
+    <!-- <ul id="v-for-object" class="demo">
+        <li v-for="value in object">
+            {{ value }}
+        </li>
+    </ul> -->
+
+    <!-- Hai tham số -->
+    <!-- <ul id="v-for-object" class="demo">
+        <li v-for="(key, value) in object">
+            {{ key }} : {{ value }}
+        </li>
+    </ul> -->
+
+    <!-- Ba tham số -->
+    <ul id="v-for-object" class="demo">
+        <li v-for="(value, key, index) in object">
+            {{ index }} - {{ key }} : {{ value }}
+        </li>
+    </ul>
+</body>
+<script>
+    new Vue({
+        el: '#v-for-object',
+        data: {
+            object: {
+                // tất nhiên chúng ta đều biết ông Bành Tổ không phải
+                // họ Bành tên Tổ, nhưng đây chỉ là một ví dụ…
+                'họ': 'Bành',
+                'tên': 'Tổ',
+                'tuổi': 800
+            }
+        }
+    })
+</script>
+
+</html>

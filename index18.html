@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VueJS</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: aqua;
+            position: relative;
+        }
+        .box2{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            top: 0;
+            right: 0;
+            background-color: darkblue;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="app">
+        <p>{{counter}}</p>
+        <!-- <button v-on:click="handleClick($event, 5)">Click me</button> -->
+        <button v-on:click="handleClick(5, $event)">Click me</button>
+        <div class="box" v-on:mousemove="handleMouseMove">
+            <p>ClientX: {{ clientX }}</p>
+            <p>ClientY: {{ clientY }}</p>
+            <div class="box2" v-on:mousemove.stop="handleMouseMoveChild"></div>
+        </div>
+        <!-- Khong cho redirect trang -->
+        <!-- <form action="/server.php" v-on:submit="handleSubmitForm"> -->
+        <form action="/server.php" v-on:submit.prevent="handleSubmitForm">
+            <label for="">Firstname</label>
+            <input type="text" name="firstname">
+            <label for="">Email</label>
+            <input type="email" name="email">
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            counter: 0,
+            clientX: 0,
+            clientY: 0
+        },
+        methods: {
+            handleClick(number, event){
+                console.log('click',event.target);
+                this.counter += number;
+            },
+            handleMouseMove(e){
+                console.log(e);
+                this.clientX = e.clientX;
+                this.clientY = e.clientY;
+            },
+            handleSubmitForm(e){
+                console.log(e);
+                // e.preventDefault();
+            },
+            handleMouseMoveChild(event){
+                // event.stopPropagation();
+                console.log('handleMouseMoveChild',event.target);
+                
+            }
+        },
+    })
+    // Ngăn sự kiện ở box 2 k lan tỏa ra box => dùng event.stopPropagation
+    // C2 v-on:mousemove.stop
+</script>
+</html>

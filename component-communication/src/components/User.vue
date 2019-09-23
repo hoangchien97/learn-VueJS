@@ -1,11 +1,15 @@
 <template>
     <div class="user">
-        <p>Ten toi la {{ name }}</p>
-        <p>Toi nam nay {{ age }} tuoi</p>
+        <p>My name is {{ name }}</p>
+        <p>I'm {{ age }} year(s) old !</p>
         <hr />
         <div class="row">
             <div class="col-xs-12 col-sm-6 col-6">
-                <user-detail></user-detail>
+                <button @click="resetAge">Reset Age</button>
+                <user-detail
+                  v-bind:age="age"
+                  v-on:ageWasUpdated="handleChangeAge"
+                ></user-detail>
             </div>
             <div class="col-xs-12 col-sm-6 col-6">
                 <user-edit></user-edit>
@@ -28,6 +32,14 @@ export default {
   components: {
     UserDetail,
     UserEdit
+  },
+  methods: {
+    resetAge(){
+      this.age = 23;
+    },
+    handleChangeAge(data){
+      this.age = data.age;
+    }
   }
 };
 </script>

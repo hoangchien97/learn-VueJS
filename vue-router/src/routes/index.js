@@ -1,6 +1,6 @@
 import Home from './../components/Home'
 import User from './../components/user/User'
-
+import UserDetail from './../components/user/UserDetail'
 export const routes = [
     {
         path: '/',
@@ -11,5 +11,10 @@ export const routes = [
         path: '/user',
         name: 'user',
         component: User
+    },
+    {
+        path: '/user/:id',
+        name: 'userDetail',
+        component: UserDetail,
     }
 ]

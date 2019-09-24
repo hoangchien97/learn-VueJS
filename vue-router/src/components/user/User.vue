@@ -6,6 +6,12 @@
         Nesciunt, quis minima corporis ad magni temporibus earum dolore nihil iste voluptas placeat amet est repellendus dicta numquam, deserunt harum voluptates maxime voluptatibus accusantium nobis quibusdam soluta ullam laboriosam. Totam!
         Vero minima hic officiis sunt, molestias ab tempore natus labore sit voluptatem nesciunt quo rerum, ipsum iusto adipisci nulla, excepturi debitis! Adipisci iste vitae eveniet dolores saepe facilis provident aspernatur.</p>
         <hr>
+        <!-- <button @click="detailUser">Detail</button> -->
+        <router-link 
+            to="/user/1"
+            tag="button"
+            class="btn btn-primary"
+        >Detail User</router-link>
         <button class="btn btn-danger" @click="backHome">Back to home</button>
     </div>
 </template>
@@ -16,6 +22,9 @@ export default {
         backHome(){
             this.$router.push('/');
             // Vue.router
+        },
+        detailUser(){
+            this.$router.push('/user/1')
         }
     }
 }

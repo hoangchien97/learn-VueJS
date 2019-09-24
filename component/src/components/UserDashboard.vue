@@ -2,7 +2,7 @@
   <div class="user-dashboard">
         <div class="list-user">
             <!-- Listen event 'userSelected' emitted from child and process it using 'childrenSelectUser' -->
-            <ListUser @userSelected="childrenSelectUser"></ListUser>
+            <ListUser @selectUser="selectUser"></ListUser>
         </div>
         <hr/>
         <div class="user-detail">
@@ -26,7 +26,7 @@ export default {
         UserDetail
     },
     methods:{
-        childrenSelectUser(user){
+        selectUser(user){
             // console.log(user);
             this.userSelectedFromChild = user;
             

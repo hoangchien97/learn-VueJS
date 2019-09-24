@@ -22,7 +22,7 @@ export default {
                 age: 24,
             };
             this.$emit('ageWasUpdated',data);
-            // console.log(data);
+            console.log(data);
             
         }
     }

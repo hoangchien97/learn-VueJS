@@ -31,7 +31,7 @@ export default {
     },
     methods: {
         selectUser(user){
-            this.$emit('userSelected',user);
+            this.$emit('selectUser',user);
         }
     }
 };

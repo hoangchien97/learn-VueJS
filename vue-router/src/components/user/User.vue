@@ -8,7 +8,7 @@
         <hr>
         <!-- <button @click="detailUser">Detail</button> -->
         <router-link 
-            to="/user/1"
+            to="/user/:id"
             tag="button"
             class="btn btn-primary"
         >Detail User</router-link>

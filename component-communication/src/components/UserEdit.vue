@@ -14,12 +14,13 @@ export default {
             
         }
     },
-    props: ['userAge'],
+    props: {
+        userAge: Number,
+        ageWasEdited: Function
+    },
     methods: {
         editAge(){
-            this.userAge += 1;
-            // console.log(this);
-            this.$emit('ageWasEdited', this.userAge);
+           this.ageWasEdited()
         }
     },
 }

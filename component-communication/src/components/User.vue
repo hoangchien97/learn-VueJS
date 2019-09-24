@@ -13,8 +13,8 @@
             </div>
             <div class="col-xs-12 col-sm-6 col-6">
                 <user-edit
-                  v-bind:user-age="age"
-                  v-on:ageWasEdited="handleEditedAge"
+                  :userAge="age"
+                  :ageWasEdited="handleEditedAge"
                 ></user-edit>
             </div>
         </div>
@@ -43,8 +43,8 @@ export default {
     handleChangeAge(data){
       this.age = data.age;
     },
-    handleEditedAge(userAge){
-      this.age = userAge;
+    handleEditedAge(){
+      this.age += 1;
       // console.log(userAge);
     }
   }

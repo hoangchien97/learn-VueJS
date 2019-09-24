@@ -12,7 +12,10 @@
                 ></user-detail>
             </div>
             <div class="col-xs-12 col-sm-6 col-6">
-                <user-edit></user-edit>
+                <user-edit
+                  v-bind:user-age="age"
+                  v-on:ageWasEdited="handleEditedAge"
+                ></user-edit>
             </div>
         </div>
     </div>
@@ -39,6 +42,10 @@ export default {
     },
     handleChangeAge(data){
       this.age = data.age;
+    },
+    handleEditedAge(userAge){
+      this.age = userAge;
+      // console.log(userAge);
     }
   }
 };

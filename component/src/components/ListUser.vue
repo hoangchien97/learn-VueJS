@@ -11,7 +11,7 @@
         <tbody>
             <tr v-for="(user, index) in listUser" :key="index">
             <td scope="row">
-                <a>{{ user.name.title }} - {{ user.name.last }} {{ user.name.first }}</a>
+                <a @click="selectUser(user)">{{ user.name.title }} - {{ user.name.last }} {{ user.name.first }}</a>
             </td>
             <td>{{ user.location.city }}</td>
             <td>{{ user.dob }}</td>
@@ -24,11 +24,16 @@
 <script>
 import data from "./../../data.json";
 export default {
-  data() {
-    return {
-      listUser: data
-    };
-  }
+    data() {
+        return {
+            listUser: data
+        };
+    },
+    methods: {
+        selectUser(user){
+            this.$emit('userSelected',user);
+        }
+    }
 };
 </script>
 

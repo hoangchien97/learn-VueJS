@@ -1,10 +1,34 @@
 import Home from './../components/Home'
-import User from './../components/user/User'
-import UserIndex from './../components/user/Index'
-import UserDetail from './../components/user/UserDetail'
-import UserEdit from './../components/user/UserEdit'
 import Header from './../components/layouts/Header'
 import NotFound from './../components/messages/404'
+
+
+// lazy load
+// const User = require('./../components/user/User')
+const User = resolve => {
+    require.ensure(['./../components/user/User'],() => {
+        resolve(require('./../components/user/User'))
+    }, 'user')
+}
+
+const UserIndex = resolve => {
+    require.ensure(['./../components/user/User'],() => {
+        resolve(require('./../components/user/Index'))
+    }, 'user')
+}
+
+const UserDetail = resolve => {
+    require.ensure(['./../components/user/User'],() => {
+        resolve(require('./../components/user/UserDetail'))
+    }, 'user')
+}
+
+const UserEdit = resolve => {
+    require.ensure(['./../components/user/User'],() => {
+        resolve(require('./../components/user/UserEdit'))
+    }, 'user')
+}
+
 export const routes = [
     {
         path: '/',

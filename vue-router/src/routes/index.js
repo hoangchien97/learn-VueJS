@@ -17,7 +17,6 @@ export const routes = [
             // list
             {
                 path: '',
-                name: 'index',
                 component: UserIndex
             },
             // detail

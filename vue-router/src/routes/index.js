@@ -37,4 +37,8 @@ export const routes = [
             }
         ]
     },
+    {
+        path: '/test-redirect',
+        redirect: {name: 'homePage'}
+    }
 ]

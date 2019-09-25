@@ -1,19 +1,19 @@
 <template>
   <div id="app" style="margin-top: 0">
-    <Header></Header>
+    <!-- Nhung page khac. header se khong hoat dong -->
+    <router-view name="header"></router-view>
     <div class="container">
-      <router-view/>
+    <router-view> </router-view>
     </div>
   </div>
 </template>
 
 <script>
 
-import Header from './components/layouts/Header'
 export default {
   name: 'app',
   components: {
-    Header
+    
   }
 }
 </script>

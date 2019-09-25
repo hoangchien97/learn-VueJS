@@ -4,7 +4,7 @@
         <p class="text-center">This is area to manage user of website</p>
         <hr>
         <button class="btn btn-primary" @click="backHome">Back To Home</button><!-- btn-block -->
-        <!-- routes child => using router-view -->
+        <!-- routes child => using router-view for rendering children -->
         <router-view></router-view>
     </div>
 </template>

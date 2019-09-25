@@ -1,7 +1,6 @@
 <template>
     <div>
         <h1>User Detail</h1>
-        <p>ID User : {{ id }}</p>
     </div>
 </template>
 
@@ -9,14 +8,9 @@
 export default {
     data(){
         return {
-            id: this.$route.params.id
+            
         }
     },
-    watch:{
-        $route(to,from){
-            this.id = to.params.id;
-        }
-    }
 }
 </script>
 

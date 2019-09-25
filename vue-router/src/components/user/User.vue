@@ -6,7 +6,9 @@
         Nesciunt, quis minima corporis ad magni temporibus earum dolore nihil iste voluptas placeat amet est repellendus dicta numquam, deserunt harum voluptates maxime voluptatibus accusantium nobis quibusdam soluta ullam laboriosam. Totam!
         Vero minima hic officiis sunt, molestias ab tempore natus labore sit voluptatem nesciunt quo rerum, ipsum iusto adipisci nulla, excepturi debitis! Adipisci iste vitae eveniet dolores saepe facilis provident aspernatur.</p>
         <hr>
-        <button class="btn btn-primary" @click="detailUser">Detail</button>
+        <button class="btn btn-primary" @click="backHome">Back To Home</button>
+        <!-- routes child => using router-view -->
+        <router-view></router-view>
     </div>
 </template>
 

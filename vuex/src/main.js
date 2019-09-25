@@ -21,7 +21,7 @@ const store = new Vuex.Store({
 // kich hoat thay doi : store.commit
 
 store.commit('increment');
-console.log(store.state.count);
+// console.log(store.state.count);
 
 
 new Vue({

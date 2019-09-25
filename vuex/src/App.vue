@@ -1,27 +1,34 @@
 <template>
-  <div id="app">
-    <vuex/>
+  <div class="container">
+    <h1>Vue Section</h1>
+    <result :result="result"/>
+    <br>
+    <vuex @updated="updatedNumber"/>
+    <!-- <vuex @updated="result += $event"/> -->
   </div>
 </template>
 
 <script>
-import Vuex from './components/Vuex.vue'
-
+import Vuex from './components/Vuex'
+import Result from './components/Result'
 export default {
   name: 'app',
+  data(){
+    return{
+      result: 0
+    }
+  },
+  methods:{
+    updatedNumber(e){
+      this.result += e;
+    }
+  },
   components: {
-    Vuex
-  }
+    Vuex,
+    Result
+  },
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>

@@ -18,12 +18,21 @@
                 </router-link>
                 <router-link 
                     tag="li"
-                    to="/user"
+                    to="/user/1"
                     class="nav-item"
                     active-class="active"
                     exact
                 >
                     <a class="nav-link">User</a>
+                </router-link>
+                <router-link 
+                    tag="li"
+                    to="/user/10"
+                    class="nav-item"
+                    active-class="active"
+                    exact
+                >
+                    <a class="nav-link">Admin</a>
                 </router-link>
             </ul>
             <form class="form-inline my-2 my-lg-0">

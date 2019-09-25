@@ -10,6 +10,8 @@
         Browser: {{ $route.query.browser }}
       </li>
     </ul>
+    <div style="height: 1700px"></div>
+    <h3 id="react">Learn React with Sky Albert</h3>
   </div>
 </template>
 

@@ -6,7 +6,7 @@
         <router-link 
             tag="button"
             class="btn btn-warning"
-            :to="{name: 'userEdit', params: {id}, query: {locate: 'vi', browser:'chorme'}}"
+            :to="link"
         >Edit user</router-link>
     </div>
 </template>
@@ -15,7 +15,16 @@
 export default {
     data(){
         return {
-            id: this.$route.params.id
+            id: this.$route.params.id,
+            link: {
+                name: 'userEdit',
+                params: this.id,
+                query: {
+                    locate: 'vi',
+                    browser: 'chorme'
+                },
+                hash: '#react'
+            },
         }
     },
 }

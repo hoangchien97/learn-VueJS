@@ -27,6 +27,29 @@ export default {
             },
         }
     },
+
+    beforeEnter: (to, from, next) => {
+        // console.log('action route guard');
+        next();
+    },
+    // called when the route that renders this component has changed,
+    // has access to `this` component instance.
+    beforeUpdate() {
+        // just use `this`
+    },
+    // called when the route that renders this component is about to
+    // be navigated away from.
+    // has access to `this` component instance.
+    beforeRouteLeave () {
+        // ...
+    },
+    beforeRouteEnter (to, from, next) {
+        if(true){
+            next()
+        }else{
+            next(false)
+        }
+    }
 }
 </script>
 

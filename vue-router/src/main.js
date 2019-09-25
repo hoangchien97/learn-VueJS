@@ -19,7 +19,17 @@ const router = new VueRouter({
   },
 })
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+
+/* Router guards
+  to : Route: target điều hướng
+  from :  Route: tuyến hiện tại đang đc điều đi
+  next: Function: Giải quyết hook
+*/
+router.beforeEach((to, from, next) => {
+  // console.log('Global route guards !...');
+  next();
+})
 
 new Vue({
   render: h => h(App),

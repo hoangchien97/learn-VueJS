@@ -34,7 +34,7 @@ export const routes = [
             {
                 path: ':id/edit',
                 name: 'userEdit',
-                component: UserEdit
+                component: UserEdit,
             }
         ]
     },

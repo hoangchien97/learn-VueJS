@@ -6,7 +6,7 @@
         <router-link 
             tag="button"
             class="btn btn-warning"
-            :to="{name: 'userEdit', params: {id}}"
+            :to="{name: 'userEdit', params: {id}, query: {locate: 'vi', browser:'chorme'}}"
         >Edit user</router-link>
     </div>
 </template>

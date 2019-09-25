@@ -9,11 +9,10 @@
 export default {
     methods:{
         increment(){
-            // send event Increment cho parent ( App.vue )
-            this.$emit('updated',1)
+            this.$store.state.result++
         },
         decrement(){
-            this.$emit('updated',-1)
+            this.$store.state.result--
         }
     }
 }

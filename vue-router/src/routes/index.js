@@ -4,6 +4,7 @@ import UserIndex from './../components/user/Index'
 import UserDetail from './../components/user/UserDetail'
 import UserEdit from './../components/user/UserEdit'
 import Header from './../components/layouts/Header'
+import NotFound from './../components/messages/404'
 export const routes = [
     {
         path: '/',
@@ -40,5 +41,13 @@ export const routes = [
     {
         path: '/test-redirect',
         redirect: {name: 'homePage'}
+    },
+    {
+        path: '/404',
+        name: 'notFound',
+        component: NotFound
+    },
+    {
+        path: '*', redirect: '/404'
     }
 ]

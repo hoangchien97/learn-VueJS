@@ -13,8 +13,8 @@
 export default {
     methods:{
         backHome(){
-            this.$router.push('/');
-            // Vue.router
+            this.$router.push({name: 'homePage'});
+            // this.$router.push('{path: '/' });
         },
     }
 }

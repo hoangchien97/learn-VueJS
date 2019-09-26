@@ -20,12 +20,24 @@ export const store = new Vuex.Store({
       }
     },
     mutations: {
-      // tang bnhieu
-      optionsIncrement(state, n){
-        state.result += n;
+      incrementMutation(state,){
+        state.result++;
       },
-      decrementMutation(state, n){
-        state.result += n;
+      decrementMutation(state){
+        state.result--;
+      }
+    },
+    actions: {
+      // Function ES6 --- sync
+      // mutation running gian tiep thong qua actions
+      incrementActions : ({commit}) => {
+        commit('incrementMutation')
+      },
+      // xu ly async
+      asyncDecrement: ({commit}) => {
+        setTimeout(()=>{
+          commit('decrementMutation')
+        }, 2000)
       }
     }
   })

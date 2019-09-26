@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>This is results other: {{ result }}</p>
+    <p>This is results other: {{ getResult }}</p>
     <div>
       <p>This is name result : {{ getNameResult }}</p>
     </div>
@@ -8,17 +8,19 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 export default {
-  // luon chay truoc khi data dc load
+  // C2 . computed: mapGetters(["getResult", "getNameResult"])
   computed: {
-    result() {
-      // Truy cap getters
-      return this.$store.getters.getResult
-    },
-    getNameResult(){
-      return this.$store.getters.getNameResult;
-    }
-  }
+    // C3: Line 17
+    ...mapGetters(["getResult", "getNameResult"])
+    // ...mapGetters(["getNameResult"]),
+    // C4 Line 18 + 20,21
+    // ...mapGetters({
+    //   result: 'getResult'
+    // })
+  },
 };
 </script>
 

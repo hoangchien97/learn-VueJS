@@ -9,4 +9,11 @@ export const store = new Vuex.Store({
     state: {
       result: 0
     },
+    // filter state để như mong muốn
+    // ví dụ : lọc sv học giỏi , ...s
+    getters: {
+      getResult: state => {
+        return state.result * 10;
+      }
+    }
   })

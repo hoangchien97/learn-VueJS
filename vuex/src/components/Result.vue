@@ -7,8 +7,8 @@ export default {
     // luon chay truoc khi data dc load
     computed: {
       result(){
-        // Lấy biến result từ store/store.js
-        return this.$store.state.result
+        // Truy cap getters
+        return this.$store.getters.getResult
       }
     },
 }

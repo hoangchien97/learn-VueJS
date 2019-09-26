@@ -1,5 +1,5 @@
 <template>
-  <p>This is results: {{ result }}</p>
+  <p>This is results other: {{ result }}</p>
 </template>
 
 <script>

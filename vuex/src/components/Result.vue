@@ -9,7 +9,7 @@ export default {
       result(){
         return this.$store.state.result;
       }
-    },
+    }
 }
 </script>
 

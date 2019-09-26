@@ -2,6 +2,7 @@
   <div>
       <button class="btn btn-success" @click="increment">Increment</button>
       <button class="btn btn-success" @click="decrement">Decrement</button>
+      <button class="btn btn-success" @click="optionsIncrement">Option Increment</button>
   </div>
 </template>
 
@@ -13,6 +14,10 @@ export default {
         },
         decrement(){
             this.$store.state.result--
+        },
+        optionsIncrement(){
+            // this.$store.commit(‘mutationName’, payload).
+            this.$store.commit('optionsIncrement',30)
         }
     }
 }

@@ -18,5 +18,11 @@ export const store = new Vuex.Store({
       getNameResult: state => {
         return state.result + ' name product'
       }
+    },
+    mutations: {
+      // tang bnhieu
+      optionsIncrement(state, n){
+         state.result += n;
+      }
     }
   })

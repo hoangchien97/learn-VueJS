@@ -7,8 +7,7 @@ export default {
     // luon chay truoc khi data dc load
     computed: {
       result(){
-        // Truy cap getters
-        return this.$store.getters.getResult
+        return this.$store.state.result;
       }
     },
 }

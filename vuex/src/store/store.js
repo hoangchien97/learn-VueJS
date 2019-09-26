@@ -22,7 +22,10 @@ export const store = new Vuex.Store({
     mutations: {
       // tang bnhieu
       optionsIncrement(state, n){
-         state.result += n;
+        state.result += n;
+      },
+      decrementMutation(state, n){
+        state.result += n;
       }
     }
   })
